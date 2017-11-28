@@ -1,0 +1,81 @@
+.projects {
+	@include clearfix();
+	.left {
+		padding: $pad-med $pad-small;
+		background-color: color(bej);
+		& ul {
+			margin-top: $pad-small;
+			& li {
+				&::before {
+					content: '◼';
+					display: inline-block;
+					font-size: 2rem;
+					padding-right: 1rem;
+					color: color(primary)
+				}
+				& a {
+					display: inline-block;
+					margin-top: $pad-small;
+					color: color(text);
+					text-decoration: underline;
+					&:hover,
+					&:active,
+					&:focus {
+						color: shade(color(primary), 15%);
+					}
+				}
+				& p {
+					font-size: 1.5rem;
+					font-weight: 600;
+					text-transform: uppercase;
+					padding-left: 2.5rem;
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	& .right {
+		display: none;
+	}
+}
+
+@media (min-width: map-get($breakpoints, b-medium-tab)) {
+	.projects {
+		padding: $pad-med 0;
+		.left {
+			padding: $pad-med;
+			display: inline-block;
+			@include span(6);
+			& h1 {
+				display: none;
+			}
+			& ul {
+				margin-top: 0;
+				& li:first-child a {
+					margin: 0;
+				}
+			}
+		}
+		.right {
+			display: block;
+			@include span(last 6);
+			padding: $pad-med;
+			& ul {
+				& li {
+					@include span(6);
+					display: flex;
+					flex-flow: wrap;
+					justify-content: center;
+					align-items: center;
+					padding: 2rem;
+					height: 20rem;
+					& a {
+						
+						& img {
+						}
+					}
+				}
+			}
+		}
+	}
+}

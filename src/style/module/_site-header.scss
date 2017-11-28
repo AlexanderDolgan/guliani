@@ -1,0 +1,228 @@
+#site-header {
+	@include container($container);
+	& .top {
+		padding: $pad-med;
+		& .logo {
+			& a {
+				display: block;
+				padding-right: 1rem;
+				& img {
+					max-height: 5rem;
+				} 
+			}
+		}
+	
+		& .site-nav {
+			margin-top: 1rem;
+			& ul {
+				text-align: center;
+				& li {
+					display: inline-block;
+					border-bottom: solid .25rem tint(color(light-gray), 75%);
+					& a {
+						display: block;
+						min-width: 10rem;
+						padding: 1rem;
+						font-size: 1.5rem;
+						font-weight: 600;
+						text-transform: uppercase;
+						color: color(light-gray);
+						&:hover {
+							text-decoration: none;
+							color: shade(color(light-gray),25%);
+						}
+					}
+				}
+				& .active {
+					border-bottom: solid .25rem color(primary);
+				}
+			}
+		}
+	}
+	& .hero {
+		& .main {
+			min-height: 40rem;
+			background-image: url('../images/hero-photo.png');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			padding-top: 22rem;	
+			& .hero-header {
+				display: inline-block;
+				padding: $pad-small;
+				background-color: rgba(255,255,255,.95);
+				& h1 {
+					font-size: 3rem;
+					font-weight: 500;
+					&:nth-child(2) {
+						color: color(primary);
+					}
+				}
+			}
+			& .screen {
+				display: none;
+			}
+		}
+		& .mob {
+			padding: $pad-med;
+			& .hero-header-description {
+				& ul {
+					& li {
+						color: color(medium-gray);
+						&::before {
+							content: '●';
+							color: color(primary);
+							display: inline-block;
+							width: 2rem;
+							height: 2rem;
+							margin-right: 1rem;
+						}
+					}
+				}
+			}
+			& .social {
+				margin-top: 2rem;
+				& ul {
+					& li {
+						display: inline-block;
+						vertical-align: middle;
+						margin-left: 3rem;
+						& a {
+							display: block;
+							width: 3rem;
+							height: 3rem;
+						}
+						& .rect {
+							height: .25rem;
+							width: 15rem;
+							background-color: color(primary);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: map-get($breakpoints, b-medium)) {
+	#site-header {
+		& .top {
+			@include clearfix();
+			& .logo {
+				@include span(6);
+				& img {
+					width: auto;
+				}
+			}
+		
+			& .site-nav {
+				@include span(last 6);
+				margin-top: 0;
+				& ul {
+					text-align: right;
+					& li {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+} 
+
+@media (min-width: map-get($breakpoints, b-medium-tab)) {
+	#site-header {
+		& .hero {
+			& .main {
+				min-height: 48rem;
+				padding-top: 20rem;	
+				& .hero-header {
+					padding: $pad-med;
+					& h1 {
+						font-size: 5rem;
+						&:nth-child(2) {
+							margin-top: 2rem;
+						}
+					}
+				}
+			}
+			& .mob {
+				@include clearfix();
+				& .hero-header-description {
+					@include span(6);
+				}
+				& .social {
+					@include span(last 6);
+					& ul {
+						& li {
+							margin-left: 4rem;
+							& .rect {
+								width: 24rem;
+								background-color: color(primary);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: map-get($breakpoints, b-large)) {
+	#site-header {
+		& .hero {
+			& .main {
+				min-height: 70rem;
+				padding: $pad-med;
+				padding-top: 13rem;
+				background-size: contain;
+				background-position: 32rem bottom;
+				& .hero-header {
+					padding-left: 0;
+				}
+				& .screen {
+					display: block;
+					& .hero-header-description {
+						margin-top: $pad-med;
+						display: inline-block;
+						& ul {
+							& li {
+								color: color(medium-gray);
+								&::before {
+									content: '●';
+									color: color(primary);
+									display: inline-block;
+									width: 2rem;
+									height: 2rem;
+									margin-right: 1rem;
+								}
+							}
+						}
+					}
+					& .social {
+						display: inline-block;
+						& ul {
+							& li {
+								display: inline-block;
+								vertical-align: middle;
+								margin-left: 3rem;
+								& a {
+									display: block;
+									width: 3rem;
+									height: 3rem;
+								}
+								& .rect {
+									height: .25rem;
+									width: 17rem;
+									background-color: color(primary);
+								}
+							}
+						}
+					}
+				}
+			}
+			& .mob {
+				display: none;
+			}
+		}
+	}
+}
