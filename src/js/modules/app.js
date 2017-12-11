@@ -1,1 +1,5 @@
-$('.gallery').slick();
+// $(document).ready(function(){
+//   $('.gallery').slick({
+    
+//   });
+// });

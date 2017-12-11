@@ -2336,7 +2336,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/build\/bower_components\/jquery\/dist\/jquery.js",
 		"oF": 0,
 		"sC": 3,
@@ -4460,11 +4460,20 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/build\/js\/modules\/app-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"\/src\/pug\/contacts.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 1,
+		"oAP": "\/build\/pug\/contacts.html",
+		"oF": 0,
+		"oS": 0
 		},
 	"\/src\/pug\/footer.pug": {
 		"cB": 0,
@@ -4508,6 +4517,15 @@
 		"ft": 512,
 		"oA": 1,
 		"oAP": "\/build\/pug\/site-header.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/src\/pug\/text-block.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 1,
+		"oAP": "\/build\/pug\/text-block.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -4576,6 +4594,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/src\/style\/module\/_contacts.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/build\/style\/module\/_contacts.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/src\/style\/module\/_gallery.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -4615,6 +4646,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/src\/style\/module\/_site-footer.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/build\/style\/module\/_site-footer.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/src\/style\/module\/_site-header.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -4624,6 +4668,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/build\/style\/module\/_site-header.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/src\/style\/module\/_text-block.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/build\/style\/module\/_text-block.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -4690,7 +4747,7 @@
 	"displayValue": "guliani",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-angryBaby",
-	"lastBuiltDate": 533474312
+	"lastBuiltDate": 534700034
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
