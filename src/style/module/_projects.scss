@@ -1,77 +1,110 @@
 .projects {
-	@include clearfix();
-	.left {
+	padding: $pad-med 0;
+	background-color: color(b-white);
+	& .wrapper {
+		@include container($container);
 		padding: $pad-med $pad-small;
 		background-color: color(bej);
+	& h1 {
+		text-align: center;
+	}
 		& ul {
 			margin-top: $pad-small;
 			& li {
-				&::before {
-					content: '◼';
-					display: inline-block;
-					font-size: 2rem;
-					padding-right: 1rem;
-					color: color(primary)
-				}
+				display: inline-block;
+				width: 100%;
+				margin-top: 1rem;
 				& a {
-					display: inline-block;
-					margin-top: $pad-small;
-					color: color(text);
-					text-decoration: underline;
-					&:hover,
-					&:active,
-					&:focus {
-						color: shade(color(primary), 15%);
+					.card-img {
+						& img {
+							display: none;
+						}
 					}
-				}
-				& p {
-					font-size: 1.5rem;
-					font-weight: 600;
-					text-transform: uppercase;
-					padding-left: 2.5rem;
-					margin-top: 0;
+					& .description {
+						& p {
+							font-size: 2.5rem;
+							font-weight: bold;
+							color: color(text);
+							font-family: typo(second-font-family);
+							&::before {
+								content: '■';
+								display: inline-block;
+								margin-right: 1rem;
+								color: color(primary);
+							}
+						}
+					}
 				}
 			}
 		}
-	}
-	& .right {
-		display: none;
 	}
 }
 
 @media (min-width: map-get($breakpoints, b-medium-tab)) {
 	.projects {
-		padding: $pad-med 0;
-		.left {
-			padding: $pad-med;
-			display: inline-block;
-			@include span(6);
-			& h1 {
-				display: none;
-			}
+		& .wrapper {
 			& ul {
-				margin-top: 0;
-				& li:first-child a {
-					margin: 0;
+				width: span(10);
+				margin-left: span(1);
+				@include clearfix();
+				& li {
+					@include gallery(4);
+					margin-top: 0;
+					text-align: center;
+					& a {
+						display: block;
+						margin: .5rem;
+						padding: $pad-small;
+						background-color: color(b-white);
+						box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+						transition: box-shadow 0.3s cubic-bezier(.25,.8,.25,1);
+						&:hover {
+							box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+						}
+						& .card-img {
+							height: 15rem;
+							overflow: hidden;
+							position: relative;
+							& img {
+								display: inline-block;
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								max-width: span(8);
+								max-height: 10rem;
+							}
+						}
+						& .description {
+							& p {
+								font-size: 1.75rem;
+							}
+						}
+					}
 				}
 			}
 		}
-		.right {
-			display: block;
-			@include span(last 6);
-			padding: $pad-med;
+	}
+}
+
+@media (min-width: map-get($breakpoints, b-large)) {
+	.projects {
+		& .wrapper {
 			& ul {
 				& li {
-					@include span(6);
-					display: flex;
-					flex-flow: wrap;
-					justify-content: center;
-					align-items: center;
-					padding: 2rem;
-					height: 20rem;
 					& a {
-						
-						& img {
+						& .card-img {
+							height: 20rem;
+							overflow: hidden;
+							position: relative;
+							& img {
+								max-height: 15rem;
+							}
+						}
+						& .description {
+							& p {
+								font-size: 2rem;
+							}
 						}
 					}
 				}
