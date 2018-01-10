@@ -1,19 +1,17 @@
 .projects {
-	padding: $pad-med 0;
+	margin: $pad-med 0;
 	background-color: color(b-white);
+	background-color: color(bej);
 	& .wrapper {
+		position: relative;
 		@include container($container);
 		padding: $pad-med $pad-small;
-		background-color: color(bej);
-	& h1 {
-		text-align: center;
-	}
 		& ul {
 			margin-top: $pad-small;
 			& li {
 				display: inline-block;
 				width: 100%;
-				margin-top: 1rem;
+				margin-top: 2rem;
 				& a {
 					.card-img {
 						& img {
@@ -23,14 +21,25 @@
 					& .description {
 						& p {
 							font-size: 2.5rem;
-							font-weight: bold;
+							font-weight: 600;
 							color: color(text);
-							font-family: typo(second-font-family);
+							font-family: typo
+							(second-font-family);
+							margin-top: 0;
 							&::before {
 								content: '■';
 								display: inline-block;
 								margin-right: 1rem;
 								color: color(primary);
+							}
+							& span {
+								display: block;
+								font-size: 1.5rem;
+								letter-spacing: .1rem;
+								font-weight: 500;
+								padding-left: 3rem;
+								text-transform: uppercase;
+								font-family: typo(global-font-family);
 							}
 						}
 					}
@@ -43,9 +52,13 @@
 @media (min-width: map-get($breakpoints, b-medium-tab)) {
 	.projects {
 		& .wrapper {
+			& h1 {
+				text-align: center;
+			}
 			& ul {
 				width: span(10);
 				margin-left: span(1);
+				margin-top: $pad-small;
 				@include clearfix();
 				& li {
 					@include gallery(4);

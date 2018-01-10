@@ -1,0 +1,18 @@
+.btn {
+	color: color(b-white);
+	font-size: 1.75rem;
+	text-transform: uppercase;
+	background-color: color(primary);
+	border-radius: 3rem;
+	padding: 1rem 2rem;
+	text-align: center;
+	border: none;
+	box-shadow: 0 0 .3rem rgba(0,0,0,.5);
+	min-width: 30rem;
+	&:hover, &:focus {
+		background-color: tint(color(primary),15%);
+	}
+	&:active {
+		background-color: shade(color(primary),15%);
+	}
+}

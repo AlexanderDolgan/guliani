@@ -1,13 +1,54 @@
 .text-block {
+	@include container($container);
 	padding: $pad-med 0;
 	& .wrapper {
 		padding: $pad-med $pad-small;
 		background-color: color(bej);
-		& .quote {
-			color: color(primary);
-			font-size: 2.5rem;
-			font-family: typo(header-font-family);
-			line-height: 4rem;
+	}
+}
+
+@media (min-width: map-get($breakpoints, b-medium-tab)) {
+	.text-block {
+		padding: $pad-med 0;
+		// overflow: hidden;
+		& .wrapper {
+			position: relative;
+			width: span(10);
+			padding: $pad-med;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -100rem;
+				height: 100%;
+				width: 100rem;
+				background-color: color(bej);
+			}
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				right: -3rem;
+				width: .25rem;
+				height: 100%;
+				background-color: color(primary);
+			}
+		}
+	}
+}
+
+@media (min-width: map-get($breakpoints, b-large)) {
+	.text-block {
+		& .wrapper {
+			& article {
+				margin-top: $pad-small;
+				column-count: 2;
+				column-gap: 4rem;
+				& p:first-child {
+					margin-top: 0;
+				}
+			}
 		}
 	}
 }

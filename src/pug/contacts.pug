@@ -1,8 +1,9 @@
-section.contacts
+section.contacts(id="contacts")
 	.wrapper
 		h1 Контакты
 		.left
 			form(action="index.html")
+				h2 Обратная связь
 				p
 					label(for="user-name") Имя
 					input(type="text", name="user-name")
@@ -11,16 +12,17 @@ section.contacts
 					input(type="text", name="user-email")
 				p
 					label(for="user-message") Сообщение
-					input(type="textarea", name="user-message")
+					textarea(name="user-message" rows="4")
 				
-				button(type="submit") Отправить
+				button(type="submit").btn Отправить
 
 		.right
 			address
 				ul
 					li
-						a(href="#") Садовая-Черногрязская, 22, стр.1
+						a(href="#") <span>Адрес:</span><br/> Москва, Садовая-Черногрязская, 22, стр.1
 					li
-						a(href="tel:+74956216002") +7 495 621 60 02
+						a(href="tel:+74956216002") <span>Телефон:</span><br/> +7 495 621 60 02
 					li
-						a(href="mail:ojakhuri@mail.ru") ojakhuri@mail.ru
+						a(href="mail:ojakhuri@mail.ru") <span>Почта:</span><br/> ojakhuri@mail.ru
+		.clearfix

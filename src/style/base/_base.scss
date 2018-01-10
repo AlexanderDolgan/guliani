@@ -36,7 +36,7 @@ h5,
 h6 {
 	font-family: map-get($typography, header-font-family);
 	font-weight: map-get($typography, header-font-weight);
-	margin: 1rem 0;
+	margin: 0;
 }
 
 h1 {
@@ -90,5 +90,16 @@ a {
 	&:focus {
 		color: shade(color(primary), 15%);
 		text-decoration: underline;
+	}
+}
+
+article blockquote {
+	margin: 0;
+	color: color(primary);
+	font-size: 2.5rem;
+	font-family: typo(header-font-family);
+	margin-top: 1rem;
+	& p {
+		line-height: 4rem;
 	}
 }

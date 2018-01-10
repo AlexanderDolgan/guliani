@@ -1,3 +1,24 @@
 .gallery {
-	padding: $pad-med $pad-small;
+	padding: 0;
+	@include container($container);
+}
+
+.slick-dots li button:before {
+	content: '■';
+	color: color(primary);
+	font-size: 3rem;
+}
+
+@media (min-width: map-get($breakpoints, b-medium-tab)) {
+	.gallery {
+		padding: $pad-med 0;
+		@include container($container);
+		& .gallery-wrapper {
+			width: span(10);
+			margin-left: span(1);
+		}
+	}
+	.slick-dots li button:before {
+		font-size: 5rem;
+	}
 }

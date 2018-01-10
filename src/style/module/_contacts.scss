@@ -1,7 +1,109 @@
 .contacts {
 	padding: $pad-med 0;
-	.wrapper {
+	@include container($container);
+	& .wrapper {
 		background-color: color(bej);
 		padding: $pad-med $pad-small;
+		& .left {
+			margin-top: $pad-med;
+			& form {
+				padding: $pad-med $pad-small;
+				box-shadow: 0 14px 28px rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.11);
+				background-color: color(b-white);
+				max-width: 50rem;
+				& label {
+					display: block;
+					font-size: 1.5rem;
+				}
+				& input {
+					padding: .5rem 1rem;
+					width: 100%;
+					line-height: 4rem;
+					font-size: 2rem;
+				}
+				& textarea {
+					@extend input;
+					line-height: 3rem;
+				}
+				& button {
+					display: block;
+					margin: 0 auto;
+					margin-top: $pad-small;
+				}
+			}
+		}
+		& .right {
+			padding: $pad-med $pad-small 0;
+			& address {
+				max-width: 25rem;
+				& ul {
+					& li {
+						margin-top: 1rem;
+						& a {
+							font-style: normal;
+							color: color(text);
+							& span {
+								font-weight: bold;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: map-get($breakpoints, b-medium-tab)) {
+	.contacts {
+		padding: $pad-med 0;
+		& .wrapper {
+			position: relative;
+			padding: $pad-med;
+			width: span(10);
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: -100rem;
+				height: 100%;
+				width: 100rem;
+				background-color: color(bej);
+			}
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				right: -3rem;
+				width: .25rem;
+				height: 100%;
+				background-color: color(primary);
+			}
+			& .clearfix {
+				@include clearfix();
+			}
+			& .left {
+				@include span(6);
+			}
+			& .right {
+				@include span(6 last);
+			}
+		}
+	}
+}
+
+@media (min-width: map-get($breakpoints, b-xlarge)) {
+	.contacts {
+		padding: $pad-med 0;
+		& .wrapper {
+			width: span(10);
+			padding: $pad-med;
+			& .left {
+				@include span(6);
+			}
+			& .right {
+				@include span(6);
+			}
+		}
 	}
 }

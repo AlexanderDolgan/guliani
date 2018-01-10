@@ -41,12 +41,12 @@
 	}
 	& .hero {
 		& .main {
+			position: relative;
 			min-height: 40rem;
-			background-image: url('../images/hero-photo.png');
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
-			padding-top: 22rem;	
+			padding-top: 18rem;
 			& .hero-header {
 				display: inline-block;
 				padding: $pad-small;
@@ -62,9 +62,12 @@
 			& .screen {
 				display: none;
 			}
+			& .social {
+				display: none;
+			}
 		}
 		& .mob {
-			padding: $pad-med;
+			padding: $pad-med $pad-med 0 ;
 			& .hero-header-description {
 				& ul {
 					& li {
@@ -81,7 +84,7 @@
 				}
 			}
 			& .social {
-				margin-top: 2rem;
+				margin-top: $pad-med;
 				& ul {
 					& li {
 						display: inline-block;
@@ -171,11 +174,22 @@
 	#site-header {
 		& .hero {
 			& .main {
+				position: relative;
 				min-height: 70rem;
 				padding: $pad-med;
 				padding-top: 13rem;
 				background-size: contain;
-				background-position: 32rem bottom;
+				background-position: right bottom;
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 10rem;
+					height: 100%;
+					background-color: color(b-white);
+				}
 				& .hero-header {
 					padding-left: 0;
 				}
@@ -184,6 +198,9 @@
 					& .hero-header-description {
 						margin-top: $pad-med;
 						display: inline-block;
+						background-color: color(b-white);
+						padding: $pad-small;
+						padding-left: 0;
 						& ul {
 							& li {
 								color: color(medium-gray);
@@ -198,23 +215,29 @@
 							}
 						}
 					}
-					& .social {
-						display: inline-block;
-						& ul {
-							& li {
-								display: inline-block;
-								vertical-align: middle;
-								margin-left: 3rem;
-								& a {
-									display: block;
-									width: 3rem;
-									height: 3rem;
-								}
-								& .rect {
-									height: .25rem;
-									width: 17rem;
-									background-color: color(primary);
-								}
+				}
+				& .social {
+					display: inline-block;
+					position: absolute;
+					right: 4rem;
+					width: 3rem;
+					z-index: 2;
+					& ul {
+						text-align: center;
+						& li {
+							display: inline-block;
+							vertical-align: middle;
+							margin-left: 0;
+							margin-top: $pad-small;
+							& a {
+								display: block;
+								width: 3rem;
+								height: 3rem;
+							}
+							& .rect {
+								height: 25rem;
+								width: .25rem;
+								background-color: color(primary);
 							}
 						}
 					}
