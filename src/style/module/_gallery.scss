@@ -14,8 +14,14 @@
 		padding: $pad-med 0;
 		@include container($container);
 		& .gallery-wrapper {
-			width: span(10);
-			margin-left: span(1);
+				width: span(10);
+				margin-left: span(1);
+				& .item  {
+					overflow: hidden;
+					max-height: 73rem;
+				& img {
+				}
+			}
 		}
 	}
 	.slick-dots li button:before {

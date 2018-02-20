@@ -9,11 +9,21 @@ header#site-header
 					a(href="#") Главная
 				li
 					a(href="#projects") Проекты
+					ul.sub-menu
+						li
+							a(href="#projects") ХинкалиХаус
+						li
+							a(href="#projects") Оджахури - рестораны
+						li
+							a(href="#projects") Оджахури - кулинарии
+						li
+							a(href="#projects") Проекты
 				li
 					a(href="#contacts") Контакты
 
 	.hero
-		.main(style="background-image: url('../images/hero-photo.png');")
+		.main
+			.bg-image-holder(style="background-image: url('../images/hero-photo.png');")
 			.social
 				ul
 					li
@@ -24,9 +34,10 @@ header#site-header
 							img(src="images/assets/icon/social/in.svg", alt="guliani instagram")
 					li
 						.rect
-			.hero-header
+			.hero-header.single-project
 				h1 Guliani Group
 				h1 Ресторанный холдинг
+				img(src="images/assets/ojakhuri.svg", alt="ojakhuri-logo")
 			.screen
 				.hero-header-description
 					ul

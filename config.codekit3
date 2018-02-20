@@ -7,7 +7,7 @@
 		"uuidString": "956C8F4C-EE78-4289-8521-C5F856ECA6C5"
 		}
 	],
-"creatorBuild": "26148",
+"creatorBuild": "26268",
 "files": {
 	"\/bower.json": {
 		"ft": 524288,
@@ -2336,7 +2336,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/build\/bower_components\/jquery\/dist\/jquery.js",
 		"oF": 0,
 		"sC": 3,
@@ -4819,6 +4819,7 @@
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
+	"autoprefixerEnableIEGrid": 0,
 	"babelAuxiliaryCommentAfter": "",
 	"babelAuxiliaryCommentBefore": "",
 	"babelConfigFileHandlingType": 0,
@@ -5382,6 +5383,10 @@
 		"id-match": {
 			"active": 0,
 			"optionString": "'^[a-z]+([A-Z][a-z]+)*$', {'properties': false, 'onlyDeclarations': true}"
+			},
+		"implicit-arrow-linebreak": {
+			"active": 0,
+			"optionString": "'beside'"
 			},
 		"indent": {
 			"active": 0,
