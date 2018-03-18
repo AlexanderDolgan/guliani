@@ -1,11 +1,16 @@
 #site-header {
 	@include container($container);
+	height: 100vh;
+	min-height: 65rem;
 	& .top {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 		padding: $pad-med;
 		& .logo {
+			align-self: center;
 			& a {
 				display: block;
-				padding-right: 1rem;
 				& img {
 					max-height: 5rem;
 				} 
@@ -13,7 +18,7 @@
 		}
 	
 		& .site-nav {
-			margin-top: 1rem;
+			align-self: center;
 			& ul {
 				text-align: center;
 				& li {
@@ -53,6 +58,7 @@
 			}
 		}
 	}
+	
 	& .hero {
 		& .main {
 			position: relative;
@@ -138,17 +144,16 @@
 @media (min-width: map-get($breakpoints, b-medium)) {
 	#site-header {
 		& .top {
-			@include clearfix();
+			flex-wrap: nowrap;
 			& .logo {
-				@include span(6);
+				flex-basis: 100%;
 				& img {
 					width: auto;
 				}
 			}
 		
 			& .site-nav {
-				@include span(last 6);
-				margin-top: 0;
+				flex-basis: 100%;
 				& ul {
 					text-align: right;
 					& li {

@@ -7,7 +7,7 @@
 		"uuidString": "956C8F4C-EE78-4289-8521-C5F856ECA6C5"
 		}
 	],
-"creatorBuild": "26268",
+"creatorBuild": "26330",
 "files": {
 	"\/bower.json": {
 		"ft": 524288,
@@ -2346,7 +2346,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/build\/bower_components\/jquery\/dist\/jquery.min.js",
 		"oF": 0,
 		"sC": 3,
