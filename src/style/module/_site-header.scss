@@ -1,14 +1,15 @@
 #site-header {
 	@include container($container);
-	height: 100vh;
-	min-height: 65rem;
+	min-height: 100vh;
 	& .top {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		padding: $pad-med;
+		padding: $pad-med $pad-small;
 		& .logo {
 			align-self: center;
+			width: 100%;
+			margin-right: 2rem;
 			& a {
 				display: block;
 				& img {
@@ -62,8 +63,9 @@
 	& .hero {
 		& .main {
 			position: relative;
+			display: flex;
+			align-items: center;
 			min-height: 40rem;
-			padding-top: 18rem;
 			& .bg-image-holder {
 				position: absolute;
 				height: 100%;
@@ -77,14 +79,16 @@
 			}
 			& .hero-header {
 				display: inline-block;
+				margin-top: 11rem;
 				padding: $pad-small;
 				background-color: rgba(255,255,255,.95);
 				& h1 {
 					font-size: 4rem;
 					font-weight: 500;
 					&:nth-child(2) {
-						color: color(primary);
 						margin-top: 1rem;
+						font-size: 3rem;
+						color: color(primary);
 					}
 				}
 			}
@@ -93,16 +97,19 @@
 					display: none;
 				}
 			}
-			& .screen {
+			& .screen-desc {
 				display: none;
 			}
 			& .social {
 				display: none;
 			}
 		}
-		& .mob {
-			padding: $pad-med $pad-med 0 ;
+		& .mob-desc-soc {
+			padding: $pad-med $pad-small;
+			display: flex;
+			flex-wrap: wrap;
 			& .hero-header-description {
+				margin-right: 5rem;
 				& ul {
 					& li {
 						color: color(medium-gray);
@@ -169,8 +176,8 @@
 	#site-header {
 		& .hero {
 			& .main {
-				min-height: 48rem;
-				padding-top: 20rem;	
+				min-height: 65rem;
+				padding-top: 15rem;
 				& .hero-header {
 					padding: $pad-med;
 					& h1 {
@@ -181,16 +188,15 @@
 					}
 				}
 			}
-			& .mob {
-				@include clearfix();
+			& .mob-desc-soc {
+				flex-wrap: nowrap;
 				& .hero-header-description {
-					@include span(6);
+					flex-grow: 1;
 				}
 				& .social {
-					@include span(last 6);
+					flex-grow: 2;
 					& ul {
 						& li {
-							margin-left: 4rem;
 							& .rect {
 								width: 24rem;
 								background-color: color(primary);
@@ -208,13 +214,24 @@
 		& .hero {
 			& .main {
 				position: relative;
-				min-height: 70rem;
+				min-height: 80vh;
 				padding: $pad-med;
-				padding-top: 13rem;
+				padding-top: 7rem;
+				align-items: center;
 				background-size: contain;
 				background-position: right bottom;
 				& .bg-image-holder {
-					width: span(7);
+					width: percentage(7/12);
+				}
+				& .text {
+					display: flex;
+					flex-wrap: wrap;
+					& .hero-header {
+						width: 100%;
+					}
+					& .screen-desc {
+						margin-left: $pad-med;
+					}
 				}
 				&::after {
 					content: '';
@@ -232,7 +249,7 @@
 					}
 				}
 				& .single-project {
-					width: span(4);
+					width: percentage(4/12);
 					& img {
 						display: block;
 						max-height: 30rem;
@@ -241,11 +258,10 @@
 						margin: 0 auto;
 					}
 				}
-				& .screen {
+				& .screen-desc {
 					display: block;
 					& .hero-header-description {
 						margin-top: $pad-med;
-						display: inline-block;
 						background-color: color(b-white);
 						padding: $pad-small;
 						padding-left: 0;
@@ -291,7 +307,7 @@
 					}
 				}
 			}
-			& .mob {
+			& .mob-desc-soc {
 				display: none;
 			}
 		}
