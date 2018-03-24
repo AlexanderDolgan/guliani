@@ -4540,6 +4540,15 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/src\/pug\/projects-3.pug": {
+		"cB": 0,
+		"cOD": 1,
+		"ft": 512,
+		"oA": 1,
+		"oAP": "\/build\/pug\/projects-3.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/src\/pug\/projects.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -4693,6 +4702,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/build\/style\/module\/_projects-2.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/src\/style\/module\/_projects-3.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/build\/style\/module\/_projects-3.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1

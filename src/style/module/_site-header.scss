@@ -1,6 +1,6 @@
 #site-header {
 	@include container($container);
-	min-height: 100vh;
+	// min-height: 100vh;
 	& .top {
 		display: flex;
 		flex-wrap: wrap;
@@ -17,7 +17,6 @@
 				} 
 			}
 		}
-	
 		& .site-nav {
 			align-self: center;
 			& ul {
