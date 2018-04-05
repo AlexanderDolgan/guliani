@@ -1,11 +1,18 @@
 .contacts {
-	padding: $pad-med 0;
-	@include container($container);
+	margin-top: $pad-med;
+	background-color: color(light-gray);
 	& .wrapper {
-		background-color: color(bej);
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0 auto;
+		max-width: map-get($breakpoints, b-large);
 		padding: $pad-med $pad-small;
+		& header {
+			width: 100%;
+		}
 		& .left {
-			margin-top: $pad-med;
+			width: 100%;
+			margin-top: $pad-small;
 			& form {
 				padding: $pad-med $pad-small;
 				box-shadow: 0 14px 28px rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.11);
@@ -33,7 +40,8 @@
 			}
 		}
 		& .right {
-			padding: $pad-med $pad-small 0;
+			width: 100%;
+			margin-top: $pad-small;
 			& address {
 				max-width: 25rem;
 				& ul {
@@ -55,55 +63,28 @@
 
 @media (min-width: map-get($breakpoints, b-medium-tab)) {
 	.contacts {
-		padding: $pad-med 0;
 		& .wrapper {
-			position: relative;
-			padding: $pad-med;
-			width: span(10);
-			&::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: -100rem;
-				height: 100%;
-				width: 100rem;
-				background-color: color(bej);
-			}
-			&::after {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 0;
-				right: -3rem;
-				width: .25rem;
-				height: 100%;
-				background-color: color(primary);
-			}
-			& .clearfix {
-				@include clearfix();
-			}
 			& .left {
-				@include span(6);
+				max-width: percentage(6/12);
 			}
 			& .right {
-				@include span(6 last);
+				padding-left: $pad-med;
+				max-width: percentage(6/12);
 			}
 		}
 	}
 }
 
-@media (min-width: map-get($breakpoints, b-xlarge)) {
-	.contacts {
-		padding: $pad-med 0;
-		& .wrapper {
-			width: span(10);
-			padding: $pad-med;
-			& .left {
-				@include span(6);
-			}
-			& .right {
-				@include span(6);
-			}
-		}
-	}
-}
+// @media (min-width: map-get($breakpoints, b-xlarge)) {
+// 	.contacts {
+// 		& .wrapper {
+// 			padding: $pad-med;
+// 			& .left {
+// 				@include span(6);
+// 			}
+// 			& .right {
+// 				@include span(6);
+// 			}
+// 		}
+// 	}
+// }

@@ -1,9 +1,9 @@
 .projects {
-	margin: $pad-med 0;
-	background-color: color(bej);
+	margin-top: $pad-med;
+	background-color: color(light-gray);
 	& .wrapper {
 		position: relative;
-		max-width: $container;
+		max-width: map-get($breakpoints, b-large);
 		padding: $pad-med $pad-small;
 		margin: 0 auto;
 		& header {
@@ -106,8 +106,4 @@
 			}
 		}
 	}
-}
-
-@media (min-width: map-get($breakpoints, b-large)) {
-	
 }

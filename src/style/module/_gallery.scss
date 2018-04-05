@@ -1,10 +1,12 @@
 .gallery {
-	padding: 0;
-	max-width: $container;
+	margin: 0 auto;
+	margin-top: $pad-med;
+	padding: $pad-med $pad-small;
+	max-width: map-get($breakpoints, b-large);
 }
 
-.slick-dots {
-	bottom: -4rem;
+.gallery-wrapper {
+	margin-bottom: 0;
 }
 
 .slick-dots li button:before {
@@ -15,8 +17,6 @@
 
 @media (min-width: map-get($breakpoints, b-medium-tab)) {
 	.gallery {
-		padding: $pad-med $pad-small;
-		@include container($container);
 		& .gallery-wrapper {
 			& .item  {
 				overflow: hidden;

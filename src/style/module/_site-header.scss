@@ -32,10 +32,10 @@
 						font-size: 1.5rem;
 						font-weight: 600;
 						text-transform: uppercase;
-						color: color(light-gray);
+						color: color(medium-gray);
 						&:hover {
 							text-decoration: none;
-							color: shade(color(light-gray),25%);
+							color: shade(color(medium-gray),25%);
 						}
 					}
 					& .sub-menu {
@@ -124,6 +124,7 @@
 				}
 			}
 			& .social {
+				display: none;
 				margin-top: $pad-med;
 				& ul {
 					& li {
@@ -193,6 +194,7 @@
 					flex-grow: 1;
 				}
 				& .social {
+					display: none;
 					flex-grow: 2;
 					& ul {
 						& li {
@@ -213,7 +215,7 @@
 		& .hero {
 			& .main {
 				position: relative;
-				min-height: 80vh;
+				min-height: 85vh;
 				padding: $pad-med;
 				padding-top: 7rem;
 				align-items: center;
@@ -226,7 +228,8 @@
 					display: flex;
 					flex-wrap: wrap;
 					& .hero-header {
-						width: 100%;
+						width: 70%;
+						min-height: 15rem;
 					}
 					& .screen-desc {
 						margin-left: $pad-med;
@@ -264,7 +267,11 @@
 						background-color: color(b-white);
 						padding: $pad-small;
 						padding-left: 0;
+						.tesis {
+							max-width: 25rem;
+						}
 						& ul {
+							max-width: 25rem;
 							& li {
 								color: color(medium-gray);
 								&::before {
@@ -288,7 +295,8 @@
 					& ul {
 						text-align: center;
 						& li {
-							display: inline-block;
+							// display: inline-block;
+							display: none;
 							vertical-align: middle;
 							margin-left: 0;
 							margin-top: $pad-max;

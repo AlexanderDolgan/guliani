@@ -4,7 +4,7 @@
 	background-color: color(bej);
 	& .wrapper {
 		position: relative;
-		@include container($container);
+		@include map-get($breakpoints, b-large);
 		padding: $pad-med $pad-small;
 		& ul {
 			margin-top: $pad-small;

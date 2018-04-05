@@ -1,44 +1,15 @@
 .text-block {
-	@include container($container);
 	padding: $pad-med 0;
+	background-color: color(light-gray);
+	margin-top: $pad-med;
 	& .wrapper {
-		padding: $pad-med $pad-small;
-		background-color: color(bej);
+		padding: 0 $pad-small;
+		max-width: map-get($breakpoints, b-large);
+		margin: 0 auto;
 	}
 }
 
 @media (min-width: map-get($breakpoints, b-medium-tab)) {
-	.text-block {
-		padding: $pad-med 0;
-		// overflow: hidden;
-		& .wrapper {
-			position: relative;
-			width: span(10);
-			padding: $pad-med;
-			&::before {
-				content: '';
-				position: absolute;
-				top: 0;
-				left: -100rem;
-				height: 100%;
-				width: 100rem;
-				background-color: color(bej);
-			}
-			&::after {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 0;
-				right: -3rem;
-				width: .25rem;
-				height: 100%;
-				background-color: color(primary);
-			}
-		}
-	}
-}
-
-@media (min-width: map-get($breakpoints, b-large)) {
 	.text-block {
 		& .wrapper {
 			& article {
@@ -51,4 +22,8 @@
 			}
 		}
 	}
+}
+
+@media (min-width: map-get($breakpoints, b-large)) {
+	
 }
