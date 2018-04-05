@@ -1,4 +1,5 @@
-$(document).ready(function(){
+
+jQuery( document ).ready(function( $ ) {
   $('.gallery-wrapper').slick({
 		dots: true,
 		infinite: true,

@@ -12,6 +12,9 @@
 @media (min-width: map-get($breakpoints, b-medium-tab)) {
 	.text-block {
 		& .wrapper {
+			& h1 {
+				max-width: percentage(6/12);
+			}
 			& article {
 				margin-top: $pad-small;
 				column-count: 2;
