@@ -2299,6 +2299,16 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/bower_components\/jquery.scrollTo.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/build\/bower_components\/jquery.scrollTo.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/bower_components\/jquery\/.bower.json": {
 		"ft": 524288,
 		"oA": 2,
